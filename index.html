@@ -828,7 +828,9 @@
             btns[qData.ans - 1].classList.add('correct');
             document.getElementById('feedback-msg').innerHTML = '<span style="color:var(--danger);">❌ 不正解...</span>';
             errors++;
-        }
+document.getElementById('error-counter').innerText = 'ミス: ' + errors;
+    }
+        
         document.getElementById('feedback-exp').innerText = qData.exp ? "【解説】\n" + qData.exp : "";
         document.getElementById('next-btn').style.display = 'block';
     }
